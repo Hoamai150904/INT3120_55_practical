@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">LearnTogether</string>
+    <string name="title_jetpack_compose_tutorial">Jetpack Compose Tutorial</string>
+    <string name="compose_short_desc">This is a short description for Jetpack Compose tutorial.</string>
+    <string name="compose_long_desc">This is a long description for Jetpack Compose tutorial.</string>
+    <
 </resources>
