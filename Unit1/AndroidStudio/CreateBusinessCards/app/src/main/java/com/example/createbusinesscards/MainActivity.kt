@@ -45,7 +45,7 @@ fun UserProfileScreen() {
 
         HeaderSection()
 
-        
+
         ContactInfoSection()
     }
 }
