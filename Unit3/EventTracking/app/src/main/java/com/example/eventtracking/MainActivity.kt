@@ -13,35 +13,22 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.eventtracking.ui.theme.EventTrackingTheme
 
-class MainActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            EventTrackingTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
-            }
-        }
-    }
-}
+data class Event(
+    val title: String,
+    val description: String? = null,
+    val daypart: String,
+    val durationInMinutes: Int,
+)
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
+fun main() {
+    // Tạo một instance của Event
+    val event = Event(
+        title = "Study Kotlin",
+        description = "Commit to studying Kotlin at least 15 minutes per day.",
+        daypart = "Evening",
+        durationInMinutes = 15
     )
-}
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    EventTrackingTheme {
-        Greeting("Android")
-    }
+    // In ra đối tượng event để kiểm tra kết quả
+    println(event)
 }
