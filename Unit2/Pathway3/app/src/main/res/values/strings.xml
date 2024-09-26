@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ArtSpace</string>
+    <string name="pic1_name">First painting</string>
+    <string name="pic2_name">Second painting</string>
+    <string name="pic3_name">Third painting</string>
+    <string name="artist1">First Artist</string>
+    <string name="artist2">Second Artist</string>
+    <string name="artist3">Third Artist</string>
+    <string name="contentDescription1">This is the first painting</string>
+    <string name="contentDescription2">This is the second painting</string>
+    <string name="contentDescription3">This is the third painting</string>
+</resources>
