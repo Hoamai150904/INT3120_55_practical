@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ThirtyDaysApp</string>
+    <string name="recipe1">Full Body Warm-Up</string>
+    <string name="recipe2">Squat for Stronger Legs</string>
+    <string name="recipe3">Push-Ups for Upper Body Strength</string>
+    <string name="recipe4">Plank for Core Strength</string>
+    <string name="recipe5">Jumping Jacks for Cardio</string>
+    <string name="recipe6">Lunges for Leg Strength</string>
+    <string name="recipe7">Mountain Climbers for Full Body Burn</string>
+    <string name="des1">A day begins with simple stretching exercises. Take 10 minutes to warm up your body and get ready for 30 days of breakthrough!</string>
+    <string name="des2">20 minutes of squats to burn excess fat and help firm up your legs and glutes. Stay consistent with your workout to see clear results!</string>
+    <string name="des3">Challenge yourself with 15 minutes of push-ups. This exercise not only strengthens your upper body but also supports your core and arms.</string>
+    <string name="des4">The plank exercise helps you achieve firm abs. Hold the plank for 1 minute, rest for 30 seconds, and repeat 5 times to feel the difference.</string>
+    <string name="des5">Jumping jacks help elevate your heart rate and burn calories effectively. Perform 3 sets, with 20 repetitions in each set, to improve cardiovascular health.</string>
+    <string name="des6">Lunges help strengthen your legs and improve balance. Perform 3 sets of 12 repetitions on each leg for the best results.</string>
+    <string name="des7">Mountain climbers are a full-body calorie-burning exercise that raises your heart rate and enhances muscle strength. Perform 3 sets of 30 seconds each to challenge your endurance.</string>
+</resources>
