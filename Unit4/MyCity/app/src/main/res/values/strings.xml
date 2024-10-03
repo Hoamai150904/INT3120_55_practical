@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MyCity</string>
+    <string name="start_visit">Start Explore Destinations</string>
+    <string name="cancel">Cancel</string>
+    <string name="next">Next</string>
+    <string name="back_button">Back</string>
+    <string name="done">Done</string>
+    <string name="choose_coffeeshop">Coffee Shops</string>
+    <string name="choose_park">Parks</string>
+    <string name="choose_restaurant">Restaurants</string>
+    <string name="choose_shoppingcenter">Shopping Centers</string>
+    <string name="checkout">Have A Nice Trip</string>
+    <string name="summary">Summary</string>
+</resources>
