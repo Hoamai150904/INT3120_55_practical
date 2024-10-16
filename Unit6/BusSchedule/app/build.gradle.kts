@@ -50,20 +50,37 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
+
+    // Compose BOM (Bill of Materials) - đảm bảo phiên bản đồng bộ giữa các thành phần Compose
     implementation(platform(libs.androidx.compose.bom))
+
+    // Các thư viện Jetpack Compose cơ bản
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+
+    // Navigation for Jetpack Compose
+    implementation("androidx.navigation:navigation-compose:2.7.0") // Thêm thư viện này
+
+    // Optional - nếu bạn cần sử dụng ViewModel trong Compose
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2") // Thêm thư viện này
+
+    // Room database
+    implementation(libs.androidx.room.common)
+    implementation(libs.androidx.room.ktx)
+
+    // Testing libraries
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
+
+    // Debugging tools for Compose
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 }
