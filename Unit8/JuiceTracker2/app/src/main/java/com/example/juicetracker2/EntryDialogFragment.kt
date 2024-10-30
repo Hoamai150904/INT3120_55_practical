@@ -9,6 +9,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.viewModels
+import androidx.appcompat.R.layout
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
@@ -73,13 +74,10 @@ class EntryDialogFragment : BottomSheetDialogFragment() {
             }
 
             override fun onNothingSelected(parent: AdapterView<*>) {
-                //if nothing is selected, assign the first color choice as the selectedColor
                 selectedColor = JuiceColor.Red
             }
         }
 
-        // When the user clicks the Save button, use the data here to either update
-        // an existing item or create a new one
         binding.saveButton.setOnClickListener {
             entryViewModel.saveJuice(
                 juiceId,
@@ -90,8 +88,7 @@ class EntryDialogFragment : BottomSheetDialogFragment() {
             )
             dismiss()
         }
-
-        // User clicked the Cancel button; just exit the dialog without saving the data
+        
         binding.cancelButton.setOnClickListener {
             dismiss()
         }
