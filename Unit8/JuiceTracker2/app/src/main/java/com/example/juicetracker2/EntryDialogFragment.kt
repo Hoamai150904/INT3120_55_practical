@@ -88,7 +88,7 @@ class EntryDialogFragment : BottomSheetDialogFragment() {
             )
             dismiss()
         }
-        
+
         binding.cancelButton.setOnClickListener {
             dismiss()
         }
