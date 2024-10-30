@@ -1,7 +1,10 @@
 package com.example.juicetracker3.ui
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.BottomSheetScaffold
+import androidx.compose.material3.BottomSheetScaffoldState
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SheetValue
@@ -12,8 +15,11 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.dimensionResource
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.juicetracker3.R
 import com.example.juicetracker3.ui.bottomsheet.EntryBottomSheet
+import com.example.juicetracker3.ui.homescreen.AdBanner
 import com.example.juicetracker3.ui.homescreen.JuiceTrackerFAB
 import com.example.juicetracker3.ui.homescreen.JuiceTrackerList
 import com.example.juicetracker3.ui.homescreen.JuiceTrackerTopAppBar
@@ -22,7 +28,6 @@ import kotlinx.coroutines.launch
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun JuiceTrackerApp(
-    modifier: Modifier = Modifier,
     juiceTrackerViewModel: JuiceTrackerViewModel = viewModel(factory = AppViewModelProvider.Factory)
 ) {
 
@@ -39,7 +44,7 @@ fun JuiceTrackerApp(
     EntryBottomSheet(
         juiceTrackerViewModel = juiceTrackerViewModel,
         sheetScaffoldState = bottomSheetScaffoldState,
-        modifier = modifier,
+        modifier = Modifier,
         onCancel = {
             scope.launch {
                 bottomSheetScaffoldState.bottomSheetState.hide()
@@ -51,8 +56,7 @@ fun JuiceTrackerApp(
                 bottomSheetScaffoldState.bottomSheetState.hide()
             }
         }
-    )
-    {
+    ) {
         Scaffold(
             topBar = {
                 JuiceTrackerTopAppBar()
@@ -67,6 +71,14 @@ fun JuiceTrackerApp(
             }
         ) { contentPadding ->
             Column(Modifier.padding(contentPadding)) {
+                AdBanner(
+                    Modifier
+                        .fillMaxWidth()
+                        .padding(
+                            top = dimensionResource(R.dimen.padding_medium),
+                            bottom = dimensionResource(R.dimen.padding_small)
+                        )
+                )
                 JuiceTrackerList(
                     juices = trackerState,
                     onDelete = { juice -> juiceTrackerViewModel.deleteJuice(juice) },
